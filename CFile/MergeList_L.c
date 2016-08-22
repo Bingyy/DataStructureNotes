@@ -19,6 +19,6 @@ void MergeList_L(LinkList &La, LinkList &Lb, LinkList &Lc){
 			pb = pb->next;
 		}
 	}
-	pc->next = pa?pa:pb; //插入剩余段：pa非null的话，pb已经null了
+	pc->next = pa?pa:pb; //插入剩余段：pa非null的话，pb已经null了,反之亦然
 	free(Lb); //释放Lb的头结点
 }//MergeList_L

@@ -7,7 +7,17 @@ typedef struct
 	int length;//当前长度
 	int listSize; //分配的存储容量（以sizeof(ElemType为单位)）
 } SqList;
-//动态分配型的顺序表的合并
+
+/*构造一个线性表*/
+Status InitList_Sq(SqList &L){
+	L.elem = (ElemType*)malloc(sizeof(ElemType) * LIST_INIT_SIZE);
+	if(!L.elem) exit(OVERFLOW);//存储分配失败
+	L.length = 0;
+	L.listSize = LISTINCREMENT;//初始存储容量
+	return OK;
+}//InitList_Sq
+
+/*动态分配型的顺序表的合并*/
 void MergeList_Sq(SqList La, SqList Lb, SqList &Lc){
 	//顺序线性表的合并
 	//La,Lb的元素按值非递减顺序排列，归并得到的Lc也是按照值的非递减顺序排列

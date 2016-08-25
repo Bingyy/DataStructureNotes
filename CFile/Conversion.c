@@ -17,5 +17,4 @@ void conversion()
 		Pop(S,e);
 		printf("%d",e);
 	}
-
 }

@@ -38,9 +38,12 @@ Status MazePath(MazeType maze, Point start, Point end)
 				}
 				if(e.di < 4)//如果方向没有走完，再换个方向试试
 				{
-
+					e.di++;
+					Push(S,e);
+					curPos = NextPos(e.seat,e.di);
 				}
 			}
 		}
-	}
+	} while(!StackEmpty(S));
+	return FALSE；
 }

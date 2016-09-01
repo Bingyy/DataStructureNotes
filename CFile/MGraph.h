@@ -10,7 +10,7 @@ typedef enum
 typedef struct ArcCell
 {
 	VRType adj; //顶点关系类型，无权图：用0或1表示是否相邻，带权图，则为权值类型
-	InfoType *info; //该弧相关信息的指针	
+	InfoType *info; //该弧相关信息的指针,可无	
 } ArcCell,AdjMatrix[MAX_VERTEX_NUM][MAX_VERTEX_NUM];
 
 
